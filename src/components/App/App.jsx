@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { UserForm } from '../Form/Form';
 import { Contacts } from '../Contacts/Contacts';
 import { Filter } from '../Filter/Filter';
@@ -22,7 +22,7 @@ function App() {
     if (parsedContacts) {
       setContacts(parsedContacts);
     }
-  });
+  }, []);
 
   const addContact = data => {
     console.log(data);
