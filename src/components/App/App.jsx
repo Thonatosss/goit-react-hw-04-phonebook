@@ -7,7 +7,6 @@ import { PhonebookWrapper } from '../Form/Form.styled';
 function App() {
   const [contacts, setContacts] = useState([]);
   const [filter, setFilter] = useState('');
-  
   const formattedFilter = filter.toLowerCase();
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(formattedFilter)

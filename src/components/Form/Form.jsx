@@ -20,17 +20,16 @@ const schema = object({
   
 });
 
-class UserForm extends Component {
-  handleFormSubmit = (values, { resetForm }) => {
+function UserForm({getData}) {
+  const handleFormSubmit = (values, { resetForm }) => {
     const id = nanoid();
     const data = { ...values, id };
-    this.props.getData(data);
+    getData(data);
     resetForm();
   };
-  render() {
     return (
       <Formik
-        onSubmit={this.handleFormSubmit}
+        onSubmit={handleFormSubmit}
         validationSchema={schema}
         initialValues={initialValues}
         validateOnChange={true}
@@ -61,6 +60,5 @@ class UserForm extends Component {
       </Formik>
     );
   }
-}
 
 export { UserForm };
