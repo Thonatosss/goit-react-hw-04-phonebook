@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import React, { Component } from 'react';
+import React from 'react';
 import { Formik, Form, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
 import { FormLabel, FilterButton, FormInput } from './Form.styled';
